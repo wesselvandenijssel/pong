@@ -29,14 +29,27 @@ Stap 0: BOILERPLATE & SETUP & GIT
    
 
 --------------------------------------------------------------------------   
-Stap1: 
+Stap1:  GAME CLASS
+--------------------------------------------------------------------------
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9f3d7290631e6d02d0ed1a3a89ab7afc260aac29
+   - Game Class aanmaken (game.js)
+   - Game constructor aanmaken
+   - Game update & draw aanmaken
+   - Game instance aanmaken
+   - Testen
+
+--------------------------------------------------------------------------
+Stap2:  GAMELOOP
 --------------------------------------------------------------------------
 
-
---------------------------------------------------------------------------
-Stap2: 
---------------------------------------------------------------------------
-
+   - Uitleg: Class
+   - Polyfill voor requestAnimationFrame aanmaken (polyfill.js)
+   - Uitleg Gameloop (met setInterval en arrow-function)
+   - Game update & draw aanroepen
+   - Testen
 
 --------------------------------------------------------------------------
 Stap3: 
