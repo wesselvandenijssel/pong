@@ -31,10 +31,7 @@ Stap 0: BOILERPLATE & SETUP & GIT
 --------------------------------------------------------------------------   
 Stap1:  GAME CLASS
 --------------------------------------------------------------------------
-<<<<<<< HEAD
-=======
 
->>>>>>> 9f3d7290631e6d02d0ed1a3a89ab7afc260aac29
    - Game Class aanmaken (game.js)
    - Game constructor aanmaken
    - Game update & draw aanmaken
@@ -52,9 +49,16 @@ Stap2:  GAMELOOP
    - Testen
 
 --------------------------------------------------------------------------
-Stap3: 
+Stap3: BALL & RECTANGLE CLASS
 --------------------------------------------------------------------------
-
+   
+   - Ball Class aanmaken (ball.js)
+   - Rectangle Class aanmaken (rectangle.js)
+   - Vector Class aanmaken (vector.js)
+   - Overerving en Extends
+   - Ball instance
+   - Ball tekenen
+   - Testen
 
 --------------------------------------------------------------------------
 Stap4: 
