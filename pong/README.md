@@ -131,7 +131,6 @@ Stap20:
 
 
 TODO:
-* Testen op meerdere browsers
 * Responsive maken
 * Geluidjes inladen en afspelen 
 * Intro maken
