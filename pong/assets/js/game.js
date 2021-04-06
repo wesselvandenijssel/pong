@@ -8,6 +8,11 @@ class Game
         // Bal-object aanmaken
         this.ball = new Ball(this.canvas.width/2, this.canvas.height/2, 'orange');
 
+        this.players = [
+            new Player(20, this.canvas.height/2, 1),
+            new Player(this.canvas.width-20, this.canvas.height/2, 2)
+        ];
+
         // Gameloop
         let lastTime;
         const callback = (milliseconds) => {
@@ -25,6 +30,9 @@ class Game
         this.ball.position.x += this.ball.velocity.x * deltatime; 
         this.ball.position.y += this.ball.velocity.y * deltatime;
 
+        this.players[0].position.y += this.players[0].velocity.y * deltatime; 
+        this.players[1].position.y += this.players[1].velocity.y * deltatime;
+
         if(this.ball.bottom > this.canvas.height || this.ball.top < 0) {
             this.ball.velocity.y = -this.ball.velocity.y; 
         }
@@ -39,6 +47,11 @@ class Game
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         // Tekenen van de bal
         this.drawRectangle(this.context, this.ball);
+
+        for(let i=0; i<this.players.length; i++) {
+            this.drawRectangle(this.context, this.players[i]);
+        }
+        
     }
 
     drawRectangle(ctx, rect, color='white') {
