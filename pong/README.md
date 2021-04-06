@@ -90,12 +90,20 @@ Stap5: PLAYER
 Stap6: PLAYER & INPUT
 --------------------------------------------------------------------------
 
-   - Uitleg: Event's KEY_DOWN en KEY_UP opvangen
+   - Uitleg: Keyboard input
+   - Event's KEY_DOWN en KEY_UP opvangen
    - Game function checkInput aanmaken
+     (gebruik makend van: ternary operator, player.velocity.y, this.keys[38])
+   - Input player1 (human)
+   - Input player2 (computer)
 
 --------------------------------------------------------------------------
-Stap7: 
+Stap7: HEADSUP-DISPLAY
 --------------------------------------------------------------------------
+
+   - Uitleg: Canvas met id="hud"
+   - HUD Class aanmaken (hud.js)
+   - Edge Class aanmaken (edge.js)
 
 
 --------------------------------------------------------------------------
