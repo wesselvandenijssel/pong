@@ -107,19 +107,27 @@ Stap7: HEADSUP-DISPLAY
 
 
 --------------------------------------------------------------------------
-Stap8: 
+Stap8: COMMENTS
 --------------------------------------------------------------------------
 
+   - Comments plaatsen
+   - Edge bovenkant/onderkant collision fix
 
 --------------------------------------------------------------------------
-Stap9: 
+Stap9: LABEL
 --------------------------------------------------------------------------
-
+   
+   - Uitleg Class Label (label.js)
+   - Tekstveld aanmaken met Class Label ('test')
+   - Scores aanmaken voor speler1 en speler2 
 
 --------------------------------------------------------------------------
-Stap10: 
+Stap10: COLLISION
 --------------------------------------------------------------------------
-
+   
+   - Verwijderen botsingen bal op zijkanten van speelveld
+   - Toevoegen botsingen bal/speler (op zijkant speler)
+   - Toevoegen botsingen bal/speler (op boven- & onderkant speler)
 
 --------------------------------------------------------------------------
 Stap11: 

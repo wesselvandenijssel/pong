@@ -61,7 +61,7 @@ De Pong game is eigenlijk voor 100% uit rechthoeken opgebouwd. Vandaar ook dat d
 belangrijk is en talloze malen wordt herbruikt. Zo wordt code efficient ingezet en vaak gebruikt.
 
 vector
-Een vector geeft in feite alleen een richting aan. We gebruiken het in de Ponggame om een object aan te 
+Een vector geeft in feite een richting aan en/of een snelheid. We gebruiken het in de Ponggame om een object aan te 
 maken die een x- en y-waarde heeft, bijvoorbeeld zoals in:  {x:0, y:0}
 In de class Rectangle gebruiken we Vector drie keer achter elkaar, omdat we een position, size en velocity 
 nodig hebben die allemaal een x- en y-waarde nodig hebben. Weer een stukje efficientie dus!
@@ -107,26 +107,50 @@ over Javascript geschreven voor het jaar 2015.
 
 ES6
 De term ES6 is een afkorting voor Ecmascript6. Dit betreft de nieuwere stijl Javascript die eigenlijk 
-sinds 2015 is begonnen in de recente evolutie binnen Javascript. Sinds 2015 z(soms wordt er dus ook over ES2015 gesproken) Er kwamen nieuwe manieren
+sinds 2015 is begonnen in de recente evolutie binnen Javascript. Men spreekt dus soms ook wel over ES2015.
+Binnen ES6 zijn er een aantal nieuwe mogelijkheden zoals: map, reduce, filter, let, const, forEach, etc.
 
 deprecated
+Betekend letterlijk 'verouderd'. Zo worden onderdelen binnen het programmeren genoemd die eigenlijk niet meer 
+gebruikt mogen worden. Mogelijk worden ze niet meer ondersteund door de huidige browser. 
 
 method
+Een ander woord voor 'function'.
 
 +=
+Operator om de huidige waarde van de variabele te behouden en daar nog iets bij op te tellen (dat staat dan rechts van de += operator).
 
 velocity
+Velocity is een term die iets zegt over de snelheid en de richting van een bepaald object. Je hebt het dan dus ook meestal 
+over een velocity over de x-, y- of z-as (xy bij 2D, xyz bij 3D).
 
 deltatime
+Variabele waar bij wordt gehouden hoeveel tijd er is verstreken. Je gebruikt deze variabele vaak om te zorgen dat een animatie op 
+een vloeiende en gelijkmatige manier getoond wordt. Deltatime is meestal een heel klein getal, waarmee de velocity vermenigvuldigd wordt.
 
-AND  &&
+AND
+Logische AND (&&) is een onderdeel waarmee twee voorwaarde aan elkaar gekoppeld kunnen worden. De AND geeft alleen TRUE als resultaat 
+terug, als beide voorwaarden TRUE zijn.
 
-OR   ||
+OR
+Logische OR (||) is een onderdeel waarmee twee voorwaarde aan elkaar gekoppeld kunnen worden. De OR geeft alleen TRUE als resultaat 
+terug, als een van beide (of beide) voorwaarden TRUE zijn.
 
+iteratie
+Een iteratie is een herhaling. Het is een cycle binnen een loop. Een enkele herhaling dus.
 
+forEach
+Een forEach is een methode om binnen Javascript door een array heen te lopen. Per array-item wordt er dan een parameter meegestuurd 
+van het array-item. Let op, voor wat betreft performance is dit een iets 'duurder' alternatief op de klassieke for-loop (+-factor 10?)
 
-if(this.ball.right > this.canvas.width || this.ball.left < 0) {
-            this.ball.velocity.x = -this.ball.velocity.x; 
-        }
+Hud
+Een HUD is een afkorting voor 'headsup-display' en zie je terug in games en/of interfaces. In een game worden de score, tijd, minimap, 
+wapens, et cetera bijgehouden en geprojecteerd op het scherm. Deze info valt onder de HUD. Bij moderne auto's wordt de HUD soms op de 
+voorruit geprojecteerd, zoals bijvoorbeeld bij de Toyota Prius.
+
+hoisting
+Code wordt van boven naar onder geinterpreteerd met behulp van een JIT-compiler (just-in-time). Vroeger kon die code pas gebruikt worden 
+in het script als het gedefineerd was. Met de komst van 'hoisting' werd het mogelijk om het bestand eerst in te lezen en kan (bijvoorbeeld een functie)
+aangeroepen worden voordat hij is aangemaakt. Het document is immers al ingelezen.
 
 
