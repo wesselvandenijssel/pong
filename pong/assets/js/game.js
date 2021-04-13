@@ -13,6 +13,8 @@ class Game
             new Player(this.canvas.width-20, this.canvas.height/2, 2)
         ];
 
+        this.hud = new Hud(this);
+
         this.keys = [];
         window.addEventListener('KEY_DOWN', (event) => {
             switch(event.detail) {
