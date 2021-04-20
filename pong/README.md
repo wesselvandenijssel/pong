@@ -130,14 +130,18 @@ Stap10: COLLISION
    - Toevoegen botsingen bal/speler (op boven- & onderkant speler)
 
 --------------------------------------------------------------------------
-Stap11: 
+Stap11: COLLISION ADVANCED
 --------------------------------------------------------------------------
 
+   - Geavanceerdere collision-check doen, waarbij bovenkant en onderkant 
+     bedje worden gecontroleerd
 
 --------------------------------------------------------------------------
-Stap12: 
+Stap12: SCORE
 --------------------------------------------------------------------------
 
+   - Bal locatie resetten zodra hij buiten het speelveld komt
+   - Functie voor het bijhouden van punten
 
 --------------------------------------------------------------------------
 Stap13: 

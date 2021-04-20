@@ -50,3 +50,4 @@ window.requestAnimFrame = window.requestAnimationFrame || window.webkitRequestAn
 window.getRandomNumBetween = function(min, max) {
     return Math.floor(Math.random()*(max-min + 1))+min;
 }
+
