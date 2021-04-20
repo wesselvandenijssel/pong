@@ -139,13 +139,19 @@ class Game {
 					ball.velocity.y = player.velocity.y > 0 && player.velocity.y > ball.velocity.y ? player.velocity.y * 1.1 : -ball.velocity.y;
 				}
 			}
+
+            // Check of de bal 'out' is
+            if (ball.right < 0 || ball.left > this.canvas.width) {
+                this.hud.addScore( player.id===1 ? 2 : 1 );
+                ball.out = true;
+                setTimeout(() => {
+                    this.ball.reset();
+                }, 1000);
+            }
+
 		}
 
-		// Check of de bal 'out' is
-		if (ball.right < 0 || ball.left > this.canvas.width) {
-			//console.log( player.id===1 ? 2 : 1 );
-			ball.out = true;
-		}
+        
 
 		// 1=='1'    TRUE
 		// 1==='1'   FALSE
