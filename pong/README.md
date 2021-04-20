@@ -151,10 +151,12 @@ Stap13: CPU SPEED NORMALIZE
    - 'Human touch' verwerken in CPU PLAYER
 
 --------------------------------------------------------------------------
-Stap14: EFFECT BALL
+Stap14: EFFECT BALL & BALL SPEED
 --------------------------------------------------------------------------
 
-
+   - Iedere keer dat de bal een paddle raakt, dan moet de snelheid met 10% omhoog
+   - Effectbal creeeren: hoe verder van het centrum van paddle af, hoe groter de hoek
+   
 --------------------------------------------------------------------------
 Stap15: 
 --------------------------------------------------------------------------
