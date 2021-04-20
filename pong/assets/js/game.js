@@ -86,15 +86,45 @@ class Game
         // Roep voor beide spelers de functie aan die de input van de speler gaat checken
         this.players.forEach(player => this.checkInput(player, this.ball));
 
+        this.checkCollisions(this.players, this.ball, this.hud.edges, deltatime);
+    }
+
+    checkCollisions(players, ball, edges, deltatime) {
+        // Controleer of de bedjes van speler1 en speler2 tegen de randen aankomen
+        for(let p=0; p<players.length; p++) {
+            if(players[p].top < edges[0].bottom) {
+                players[p].position.y = edges[0].size.y + (players[p].size.y/2);
+            }else if(players[p].bottom > edges[1].top) {
+                players[p].position.y = this.canvas.height - edges[1].size.y - (players[p].size.y/2);
+            }
+        }
+
         // Controleer of de bal de onderkant of de bovenkant raakt
         if(this.ball.bottom > this.canvas.height-10 || this.ball.top < 10) {
             this.ball.velocity.y = -this.ball.velocity.y; 
         }
 
-        if(this.ball.right > this.canvas.width || this.ball.left < 0) {
-            this.ball.velocity.x = -this.ball.velocity.x; 
+        // Check of de bal een bedje van een speler raakt
+
+        // hier collision script maken //
+
+        if(this.collide(ball, players[0], deltatime)) {
+            alert('bots!');
         }
 
+
+        //
+    }
+
+    collide(rect1, rect2, dt) {
+        if (rect1.left   + rect1.velocity.x * dt < rect2.right  + rect2.velocity.x * dt &&
+            rect1.right  + rect1.velocity.x * dt > rect2.left   + rect2.velocity.x * dt &&
+            rect1.top    + rect1.velocity.y * dt < rect2.bottom + rect2.velocity.y * dt &&
+            rect1.bottom + rect1.velocity.y * dt > rect2.top    + rect2.velocity.y * dt) {
+            return true;
+        }else{
+            return false;
+        }
     }
 
     draw() {
