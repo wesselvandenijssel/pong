@@ -144,12 +144,14 @@ Stap12: SCORE
    - Functie voor het bijhouden van punten
 
 --------------------------------------------------------------------------
-Stap13: 
+Stap13: CPU SPEED NORMALIZE
 --------------------------------------------------------------------------
 
+   - De snelheid van de computer paddle mag niet hoger zijn dan 400 px / sec
+   - 'Human touch' verwerken in CPU PLAYER
 
 --------------------------------------------------------------------------
-Stap14: 
+Stap14: EFFECT BALL
 --------------------------------------------------------------------------
 
 

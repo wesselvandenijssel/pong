@@ -73,7 +73,21 @@ class Game {
 				player.velocity.y += this.keys[40] === true ? 400 : 0;
 				break;
 			case 2: // Computer player (rechts)
-				player.position.y = ball.position.y;
+				if (player.locked) {
+					if (--player.stickyFrames === 0) {
+						player.velocity.y = 0;
+						player.locked = false;
+						console.log('unlock');
+					}
+					return;
+				} else {
+					player.velocity.y = 0;
+					player.velocity.y += ball.position.y < player.top ? -400 : 0;
+					player.velocity.y += ball.position.y > player.bottom ? 400 : 0;
+					player.stickyFrames = getRandomNumBetween(5, 20);
+					player.locked = true;
+					console.log('lock');
+				}
 				break;
 		}
 	}
@@ -140,18 +154,15 @@ class Game {
 				}
 			}
 
-            // Check of de bal 'out' is
-            if (ball.right < 0 || ball.left > this.canvas.width) {
-                this.hud.addScore( player.id===1 ? 2 : 1 );
-                ball.out = true;
-                setTimeout(() => {
-                    this.ball.reset();
-                }, 1000);
-            }
-
+			// Check of de bal 'out' is
+			if (ball.right < 0 || ball.left > this.canvas.width) {
+				this.hud.addScore(player.id === 1 ? 2 : 1);
+				ball.out = true;
+				setTimeout(() => {
+					this.ball.reset();
+				}, 1000);
+			}
 		}
-
-        
 
 		// 1=='1'    TRUE
 		// 1==='1'   FALSE
